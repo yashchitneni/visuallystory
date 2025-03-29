@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Facebook, Twitter, Instagram, GitHub, Mail } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Github, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -24,7 +23,7 @@ const Footer: React.FC = () => {
                 <Instagram size={20} />
               </a>
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                <GitHub size={20} />
+                <Github size={20} />
               </a>
             </div>
           </div>
