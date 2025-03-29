@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 255 80% 75%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -97,5 +93,91 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', sans-serif;
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #1A1F2C 0%, #242b42 100%);
+}
+
+.purple-glow {
+  filter: drop-shadow(0 0 12px rgba(155, 135, 245, 0.6));
+}
+
+.orange-glow {
+  filter: drop-shadow(0 0 12px rgba(249, 115, 22, 0.6));
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #9b87f5 0%, #F97316 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid-dots {
+  background-image: 
+    radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.glass-effect {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.editor-highlight {
+  transition: all 0.3s ease;
+}
+
+.editor-highlight:hover {
+  box-shadow: 0 0 0 2px rgba(155, 135, 245, 0.5);
+}
+
+.shapes-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  filter: blur(40px);
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background-color: #9b87f5;
+  top: -100px;
+  left: -50px;
+  animation: float 25s ease-in-out infinite alternate;
+}
+
+.shape-2 {
+  width: 400px;
+  height: 400px;
+  background-color: #F97316;
+  bottom: -150px;
+  right: -100px;
+  animation: float 20s ease-in-out infinite alternate-reverse;
+}
+
+.shape-3 {
+  width: 200px;
+  height: 200px;
+  background-color: #7E69AB;
+  top: 40%;
+  left: 60%;
+  animation: float 15s ease-in-out infinite alternate;
 }
