@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Play, Waveform, Zap } from 'lucide-react';
+import { ArrowRight, Play, Zap, Activity } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-4">
                 <div className="flex items-center">
-                  <Waveform size={18} className="text-purple-light mr-2" />
+                  <Activity size={18} className="text-purple-light mr-2" />
                   <div className="space-y-1 w-full">
                     <div className="h-1 bg-gradient-to-r from-purple-light to-orange-light rounded-full" />
                     <div className="flex space-x-1 justify-between">
